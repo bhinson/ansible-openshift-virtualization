@@ -13,6 +13,14 @@
       vm.kubevirt.io/os: "{{ os_images_template }}"
       vm.kubevirt.io/workload: "{{ os_images_workload }}"
 
+    labels:
+      app: "{{ vm_name }}"
+      kubevirt.io/dynamic-credentials-support: 'true'
+      vm.kubevirt.io/template: "{{ os_images_template }}-{{ os_images_workload }}-{{ os_images_flavor }}"
+      vm.kubevirt.io/template.namespace: "{{ os_images_template_namespace }}"
+      vm.kubevirt.io/template.revision: "{{ os_images_template_revision }}"
+      vm.kubevirt.io/template.version: "{{ os_images_template_version }}"
+
     data_volume_templates:
       - kind: 'DataVolume'
         metadata:
