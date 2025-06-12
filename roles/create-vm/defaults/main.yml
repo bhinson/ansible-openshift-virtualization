@@ -13,6 +13,9 @@
 # os_images_template: rhel9
 # os_images_flavor: small
 # os_images_workload: server
+# os_images_template_namespace: openshift
+# os_images_template_revision: '1'
+# os_images_template_version: v0.32.2
 # cloud_init_password: xxxx-yyyy-zzzz
 # ssh_key_secret: sshkey-user-default
 # openshift_api_key: sha256~xxxx
