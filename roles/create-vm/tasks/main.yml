@@ -5,7 +5,7 @@
     namespace: "{{ vm_project }}"
     api_key: "{{ lookup('ansible.builtin.env', 'K8S_AUTH_API_KEY') }}"
     running: true
-    validate_certs: "{{ lookup('ansible.builtin.env', 'K8S_AUTH_VERIFY_SSL') }}"
+    validate_certs: "{{ validate_certs }}"
     state: present
       
     annotations:
