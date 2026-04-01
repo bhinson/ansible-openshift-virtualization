@@ -4,6 +4,7 @@
     name: "{{ vm_name }}"
     namespace: "{{ vm_project }}"
 #    api_key: "{{ openshift_api_key }}"
+    api_key: "{{ kube_token }}"
     running: true
     validate_certs: "{{ validate_certs }}"
     state: present
